@@ -7,7 +7,7 @@ import androidx.core.content.ContextCompat
 import com.example.lithoapp.ui.SecondActivity
 import java.util.regex.Pattern
 
-class Validations(ctx: Context) {
+class PhoneValidation(ctx: Context) {
 
     private val ctx: Context
     private val mobilePref = PhonePreference(ctx)

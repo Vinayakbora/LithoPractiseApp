@@ -7,7 +7,7 @@ import android.text.InputType
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lithoapp.domain.PhonePreference
 import com.example.lithoapp.R
-import com.example.lithoapp.domain.Validations
+import com.example.lithoapp.domain.PhoneValidation
 import com.facebook.litho.*
 import com.facebook.litho.core.margin
 import com.facebook.litho.kotlin.widget.Image
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 class MyComponent(ctx: Context) : KComponent() {
     private val mobilePref = PhonePreference(ctx)
     private var number = mobilePref.getData()
-    private val validation = Validations(ctx)
+    private val validation = PhoneValidation(ctx)
     private var isLoggedIn = mobilePref.getLoginStatus()
 
     override fun ComponentScope.render(): Component {
